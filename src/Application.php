@@ -14,13 +14,13 @@ class Application extends Container
     protected $console;
     protected $config;
 
-    protected static $version = '0.0.1-alpha';
+    protected static $version = '0.0.2-alpha';
 
     public function __construct($basePath = null, $configPath = null)
     {
         self::setInstance($this);
 
-        $basePath = $basePath ?: __DIR__ . '/../../../tanto';
+        $basePath = $basePath ?: __DIR__ . '/../../../..';
         $configPath = $configPath ?: $basePath.'/config';
 
         if (file_exists($basePath . '/.env')) {
